@@ -9,5 +9,13 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    {
+      resolve: 'gatsby-source-rest-api',
+      options: {
+        endpoints: [
+          `http://127.0.0.1:8000/api/posts`,
+        ],
+      },
+    },
   ],
 }
